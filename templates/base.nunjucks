@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>{{title}}</title>
+    	<!-- core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link href="css/owl.transitions.css" rel="stylesheet">
+        <link href="css/prettyPhoto.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->       
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    </head><!--/head-->
+    <body>
+      <div class="container">
+        <div> Hello my {{name}}</div>
+ 
+        <ul>
+          {% for quote in quotes %}
+            <li>
+              <span>{{ quote.name }}</span>
+              <span>{{ quote.quote }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+        
+        <form action="/hello" method="POST">
+          <table>
+              <tr>
+                <td>
+                  <div class="form-group">
+                    <label for="school">目前就读学校</label>
+                    <input class="form-control" id="school" type="text">
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group">
+                    <label for="major">目前就读学专业</label>
+                    <input class="form-control" id="major" type="text">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-group">
+                    <label for="japanese">日语能力等级</label>
+                    <select class="form-control" id="japanese">
+                      <option>能力考N1</option>
+                      <option>能力考N2</option>
+                      <option>能力考N3</option>
+                      <option>能力考N4</option>
+                      <option>能力考N5</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="form-group">
+                    <label for="english">英语托福成绩</label>
+                    <select class="form-control" id="english">
+                      <option>90以上</option>
+                      <option>80至90</option>
+                      <option>70至80</option>
+                      <option>60至70</option>
+                      <option>60以下</option>
+                      <option>无</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+        
+        <div><a class="btn btn-primary btn-lg" href="/">回主页</a></div>
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/mousescroll.js"></script>
+        <script src="js/smoothscroll.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <script src="js/jquery.isotope.min.js"></script>
+        <script src="js/jquery.inview.min.js"></script>
+        <script src="js/wow.min.js"></script>
+    </body>
+</html>
